@@ -1,23 +1,23 @@
 
 import { motion } from 'framer-motion';
-import { EyeOff, Lock, CheckCircle2, ChevronDown, Gift, Users } from 'lucide-react';
+import { EyeOff, Lock, CheckCircle2, ChevronDown, Gift, Users, Heart } from 'lucide-react';
 
 const trustFeatures = [
   {
     icon: Gift,
-    text: "Buy 1 Get 1 FREE Offer",
+    text: "Buy 1 Get 1 FREE",
     color: "from-pink-400 to-pink-500",
     animationDelay: 0
   },
   {
     icon: EyeOff,
-    text: "100% Discreet Testing",
+    text: "100% Discreet",
     color: "from-violet-400 to-violet-500",
     animationDelay: 0.5
   },
   {
-    icon: Users,
-    text: "Share with a Friend",
+    icon: Heart,
+    text: "Share with a friend",
     color: "from-emerald-400 to-emerald-500",
     animationDelay: 1
   }
@@ -40,9 +40,9 @@ const HeroSection = () => {
                 <span>Limited Time Offer</span>
               </div>
               <h1 className="text-lazo-bordeaux mb-4 leading-tight text-4xl md:text-6xl font-bold">
-                Buy 1 Get 1 
-                <span className="gradient-text block">FREE</span>
-                <span className="text-2xl md:text-3xl block mt-2">Loyalty Test</span>
+                Buy 1
+                <span className="gradient-text block">Get 1 FREE</span>
+                <span className="text-lazo-bordeaux block">Loyalty Test</span>
               </h1>
             </motion.div>
 
@@ -59,18 +59,17 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Gift className="w-6 h-6 mr-2" />
-                Claim Your BOGO Offer Now
+                Claim Your Free Loyalty Test Now
               </motion.a>
             </motion.div>
           </div>
 
-          {/* Hero Image - Moved below CTA, no container */}
+          {/* Hero Image - Moved below CTA, cropped and smaller */}
           <motion.div
             initial={{ opacity: 0.8, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative w-full max-w-[350px] mx-auto"
+            className="relative w-full max-w-[280px] mx-auto"
           >
             <motion.div
               animate={{
@@ -86,40 +85,45 @@ const HeroSection = () => {
               <img
                 src="/lovable-uploads/430c04db-81ad-4c6e-ba64-14dc88cbb054.png"
                 alt="Two friends sharing Lazo loyalty test - Buy 1 Get 1 Free offer"
-                className="w-full h-auto object-cover rounded-2xl shadow-lg"
+                className="w-full h-auto object-cover object-center rounded-2xl shadow-lg"
+                style={{ objectPosition: 'center 30%' }}
                 loading="eager"
                 fetchPriority="high"
               />
             </motion.div>
           </motion.div>
 
+          {/* Logo above How it Works */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="flex flex-col items-center gap-4"
+          >
+            <img
+              src="/images/LazoOnWhite.png"
+              alt="Lazo Logo"
+              className="h-8 w-auto opacity-80"
+              loading="lazy"
+            />
+            <a
+              href="#how-it-works"
+              className="inline-flex items-center text-gray-600 hover:text-lazo-bordeaux transition-colors duration-300"
+            >
+              <span className="text-lg">How a Loyalty Test Works</span>
+              <ChevronDown className="w-5 h-5 ml-2 animate-bounce" />
+            </a>
+          </motion.div>
+
           {/* Content Section */}
           <div className="text-center max-w-4xl mx-auto space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="mt-6"
-            >
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center text-gray-600 hover:text-lazo-bordeaux transition-colors duration-300"
-              >
-                <span className="text-lg">How a Loyalty Test Works</span>
-                <ChevronDown className="w-5 h-5 ml-2 animate-bounce" />
-              </a>
-            </motion.div>
-
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="text-gray-700 max-w-3xl mx-auto text-lg"
+              className="text-lazo-bordeaux max-w-3xl mx-auto text-lg font-semibold"
             >
-              Get two complete loyalty tests for the price of one! Perfect for testing your own relationship or sharing with a friend. 
-              <span className="font-semibold text-lazo-bordeaux block mt-2">
-                You can also share this promo code with someone else if you'd like.
-              </span>
+              Get 2 loyalty tests for the price of 1! Perfect for testing your own relationship more thoroughly or helping out a friend who's also in doubt.
             </motion.p>
 
             {/* Trust Features */}

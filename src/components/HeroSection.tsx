@@ -64,13 +64,16 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Hero Image - Moved below CTA, cropped and smaller */}
+          {/* Hero Image with Pink Halo */}
           <motion.div
             initial={{ opacity: 0.8, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative w-full max-w-[280px] mx-auto"
           >
+            {/* Pink Halo */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-48 h-16 bg-gradient-to-r from-pink-300/40 via-pink-400/60 to-pink-300/40 rounded-full blur-xl opacity-80"></div>
+            
             <motion.div
               animate={{
                 y: [0, -8, 0],
@@ -93,19 +96,13 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Logo above How it Works */}
+          {/* How it Works Link */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             className="flex flex-col items-center gap-4"
           >
-            <img
-              src="/images/LazoOnWhite.png"
-              alt="Lazo Logo"
-              className="h-8 w-auto opacity-80"
-              loading="lazy"
-            />
             <a
               href="#how-it-works"
               className="inline-flex items-center text-gray-600 hover:text-lazo-bordeaux transition-colors duration-300"

@@ -14,26 +14,31 @@ import SoulessjayBanner from '@/components/SoulessjayBanner';
 
 const Index = () => {
   useEffect(() => {
-    // Set title and meta tags
-    document.title = 'Getlazo - #1 Loyalty Test App | Test Your Partner\'s Fidelity';
+    // Set title and meta tags for BOGO offer
+    document.title = 'Buy 1 Get 1 FREE Loyalty Test | Lazo Special Offer';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', "Lazo: The #1 Loyalty Test service. Wondering if they're loyal? Getlazo connects you with expert agents who discreetly test your partner's fidelity through social media.");
+      metaDescription.setAttribute('content', "Limited time offer: Buy 1 Get 1 FREE loyalty test! Test your partner's fidelity discreetly or share with a friend. Claim your BOGO offer now with Lazo.");
     }
 
-    // Add structured data for better SEO
+    // Add structured data for the special offer
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Service',
-      'name': 'Lazo Loyalty Test',
-      'description': 'Discreet loyalty testing service to verify partner fidelity',
+      '@type': 'Offer',
+      'name': 'Buy 1 Get 1 Free Loyalty Test',
+      'description': 'Special promotional offer for Lazo loyalty testing service - buy one test and get another one free',
       'url': 'https://getlazo.app',
-      'provider': {
+      'seller': {
         '@type': 'Organization',
         'name': 'Getlazo',
         'url': 'https://getlazo.app'
+      },
+      'priceSpecification': {
+        '@type': 'PriceSpecification',
+        'price': '0',
+        'priceCurrency': 'USD'
       }
     });
     document.head.appendChild(script);
@@ -64,7 +69,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-white">
       {/* SEO-optimized hidden heading for search engines */}
-      <h1 className="sr-only">Lazo - The Ultimate Loyalty Test Service | Test Your Partner's Fidelity Discreetly</h1>
+      <h1 className="sr-only">Buy 1 Get 1 Free Loyalty Test - Limited Time Offer | Lazo Fidelity Testing</h1>
       
       <BackgroundShapes />
       <Navbar />

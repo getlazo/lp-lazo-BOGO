@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Gift } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,10 @@ const Navbar = () => {
         <a 
           href="https://www.getlazo.app/providers"
           rel="noopener noreferrer"
-          className="hidden md:block px-5 py-2 rounded-full bg-lazo-bordeaux text-white text-sm font-medium transition-all hover:bg-lazo-bordeaux-light"
+          className="hidden md:flex items-center px-5 py-2 rounded-full bg-lazo-bordeaux text-white text-sm font-medium transition-all hover:bg-lazo-bordeaux-light"
         >
-          Get a loyalty test
+          <Gift className="w-4 h-4 mr-1" />
+          Get BOGO Offer
         </a>
         
         <button 
@@ -80,10 +82,11 @@ const Navbar = () => {
             <a 
               href="https://www.getlazo.app/providers"
               rel="noopener noreferrer"
-              className="w-full py-3 rounded-full bg-lazo-bordeaux text-white text-sm font-medium text-center"
+              className="flex items-center justify-center w-full py-3 rounded-full bg-lazo-bordeaux text-white text-sm font-medium text-center"
               onClick={() => setIsOpen(false)}
             >
-              Get a loyalty test
+              <Gift className="w-4 h-4 mr-1" />
+              Get BOGO Offer
             </a>
           </div>
         </div>

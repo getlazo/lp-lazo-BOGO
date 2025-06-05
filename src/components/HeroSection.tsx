@@ -28,42 +28,7 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-to-b from-white to-lazo-pink/5">
       <div className="container relative z-10">
         <div className="flex flex-col items-center space-y-8">
-          {/* Hero Image - Modern card style */}
-          <motion.div
-            initial={{ opacity: 0.8, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative w-full max-w-[500px] mx-auto"
-          >
-            <motion.div
-              animate={{
-                y: [0, -8, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative will-change-transform"
-            >
-              {/* Modern card container */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-white to-gray-50 p-4">
-                <div className="absolute inset-0 bg-gradient-to-br from-lazo-pink/10 to-lazo-bordeaux/5" />
-                <img
-                  src="/lovable-uploads/430c04db-81ad-4c6e-ba64-14dc88cbb054.png"
-                  alt="Two friends sharing Lazo loyalty test - Buy 1 Get 1 Free offer"
-                  className="w-full h-auto object-cover rounded-2xl relative z-10"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-                {/* Decorative elements */}
-                <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-lazo-bordeaux to-lazo-pink rounded-full opacity-20" />
-                <div className="absolute bottom-4 left-4 w-8 h-8 bg-gradient-to-br from-pink-400 to-violet-400 rounded-full opacity-30" />
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Content Section */}
+          {/* Title Section - Moved to top */}
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -98,11 +63,42 @@ const HeroSection = () => {
                 Claim Your BOGO Offer Now
               </motion.a>
             </motion.div>
+          </div>
 
+          {/* Hero Image - Moved below CTA, no container */}
+          <motion.div
+            initial={{ opacity: 0.8, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative w-full max-w-[350px] mx-auto"
+          >
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative will-change-transform"
+            >
+              <img
+                src="/lovable-uploads/430c04db-81ad-4c6e-ba64-14dc88cbb054.png"
+                alt="Two friends sharing Lazo loyalty test - Buy 1 Get 1 Free offer"
+                className="w-full h-auto object-cover rounded-2xl shadow-lg"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Content Section */}
+          <div className="text-center max-w-4xl mx-auto space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className="mt-6"
             >
               <a
@@ -117,7 +113,7 @@ const HeroSection = () => {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               className="text-gray-700 max-w-3xl mx-auto text-lg"
             >
               Get two complete loyalty tests for the price of one! Perfect for testing your own relationship or sharing with a friend. 
@@ -136,7 +132,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.3,
-                    delay: feature.animationDelay
+                    delay: 0.5 + feature.animationDelay
                   }}
                   whileHover={{ scale: 1.02 }}
                 >

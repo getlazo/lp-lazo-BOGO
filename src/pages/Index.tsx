@@ -10,7 +10,6 @@ import Testimonials from '@/components/Testimonials';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import SoulessjayBanner from '@/components/SoulessjayBanner';
 
 const Index = () => {
   useEffect(() => {
@@ -77,7 +76,6 @@ const Index = () => {
       <main className="relative">
         <div className="space-y-0">
           <HeroSection />
-          <SoulessjayBanner />
           <CheckersSection />
           <HowItWorksSection />
           <ChatSection />

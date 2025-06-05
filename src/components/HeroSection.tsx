@@ -28,41 +28,39 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-to-b from-white to-lazo-pink/5">
       <div className="container relative z-10">
         <div className="flex flex-col items-center space-y-8">
-          {/* Hero Image Bubble - Using the new BOGO illustration */}
+          {/* Hero Image - Modern card style */}
           <motion.div
             initial={{ opacity: 0.8, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative w-full max-w-[400px] mx-auto"
+            className="relative w-full max-w-[500px] mx-auto"
           >
-            <div className="relative aspect-square">
-              {/* Background bubble */}
-              <div className="absolute inset-0 bg-gradient-to-br from-lazo-pink/30 to-lazo-bordeaux/20 rounded-full blur-xl" />
-              
-              {/* Floating animation */}
-              <motion.div
-                animate={{
-                  y: [0, -8, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="relative w-full h-full will-change-transform"
-              >
-                {/* Image container */}
-                <div className="absolute inset-5 bg-white/90 backdrop-blur-[5px] rounded-full shadow-xl overflow-hidden border border-white/30">
-                  <img
-                    src="/lovable-uploads/430c04db-81ad-4c6e-ba64-14dc88cbb054.png"
-                    alt="Two friends sharing Lazo loyalty test - Buy 1 Get 1 Free offer"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    fetchPriority="high"
-                  />
-                </div>
-              </motion.div>
-            </div>
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative will-change-transform"
+            >
+              {/* Modern card container */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-white to-gray-50 p-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-lazo-pink/10 to-lazo-bordeaux/5" />
+                <img
+                  src="/lovable-uploads/430c04db-81ad-4c6e-ba64-14dc88cbb054.png"
+                  alt="Two friends sharing Lazo loyalty test - Buy 1 Get 1 Free offer"
+                  className="w-full h-auto object-cover rounded-2xl relative z-10"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-lazo-bordeaux to-lazo-pink rounded-full opacity-20" />
+                <div className="absolute bottom-4 left-4 w-8 h-8 bg-gradient-to-br from-pink-400 to-violet-400 rounded-full opacity-30" />
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Content Section */}
@@ -111,7 +109,7 @@ const HeroSection = () => {
                 href="#how-it-works"
                 className="inline-flex items-center text-gray-600 hover:text-lazo-bordeaux transition-colors duration-300"
               >
-                <span className="text-lg">How the BOGO Offer Works</span>
+                <span className="text-lg">How a Loyalty Test Works</span>
                 <ChevronDown className="w-5 h-5 ml-2 animate-bounce" />
               </a>
             </motion.div>

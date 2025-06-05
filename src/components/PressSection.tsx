@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,22 +9,26 @@ const pressArticles = [
   {
     source: "Sky News",
     quote: "Lazo just created a database of people that are willing to help.",
-    logo: "/press-logos/sky-news.svg"
+    logo: "/press-logos/sky-news.svg",
+    url: "https://news.sky.com/story/loyalty-testers-will-now-catch-out-your-cheating-boyfriend-for-a-fee-13225869"
   },
   {
     source: "Business Insider",
     quote: "Unfortunately, a lot of the girls who come to Lazo are usually right about their cheating boyfriends.",
-    logo: "/press-logos/business-insider.svg"
+    logo: "/press-logos/business-insider.svg",
+    url: "https://www.businessinsider.com/loyalty-test-boyfriend-lazo-questions-pay-2024-6"
   },
   {
     source: "Mirror",
     quote: "If you can't be loyal, then you shouldn't be in that relationship.",
-    logo: "/press-logos/mirror.svg"
+    logo: "/press-logos/mirror.svg",
+    url: "https://www.mirror.co.uk/news/us-news/loyalty-testing-app-sees-attractive-33831409"
   },
   {
     source: "9Honey",
     quote: "Lazo gives those in doubt the tools to test their partner's loyalty with less risk of being caught.",
-    logo: "/press-logos/9honey.svg"
+    logo: "/press-logos/9honey.svg",
+    url: "https://honey.nine.com.au/latest/loyalty-test-online-tiktok-cheating-trend-exclusive/44caca5a-f48f-4a12-971f-d031a08c362e"
   }
 ];
 
@@ -105,7 +110,12 @@ const PressSection = () => {
                       selectedIndex === index ? 'scale-100' : 'scale-95 opacity-70'
                     }`}
                   >
-                    <div className="bg-white rounded-2xl p-8 shadow-soft h-full border border-gray-100 hover:border-lazo-pink/30 transition-all">
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-white rounded-2xl p-8 shadow-soft h-full border border-gray-100 hover:border-lazo-pink/30 transition-all hover:shadow-lg transform hover:scale-[1.02] duration-300"
+                    >
                       <div className="h-12 mb-6 opacity-80">
                         <img
                           src={article.logo}
@@ -122,7 +132,10 @@ const PressSection = () => {
                       <blockquote className="text-gray-600 italic text-lg mb-4">
                         "{article.quote}"
                       </blockquote>
-                    </div>
+                      <div className="text-sm text-lazo-bordeaux font-medium mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Read full article →
+                      </div>
+                    </a>
                   </motion.div>
                 </div>
               ))}
@@ -149,4 +162,4 @@ const PressSection = () => {
   );
 };
 
-export default PressSection; 
+export default PressSection;

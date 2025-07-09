@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
         
         <a 
-          href="https://www.getlazo.app/?ambassador=B1G1"
+          href="https://www.getlazo.app/providers"
           rel="noopener noreferrer"
           className="hidden md:flex items-center px-5 py-2 rounded-full bg-lazo-bordeaux text-white text-sm font-medium transition-all hover:bg-lazo-bordeaux-light"
         >
@@ -80,7 +80,7 @@ const Navbar = () => {
               FAQ
             </a>
             <a 
-              href="https://www.getlazo.app/?ambassador=B1G1"
+              href="https://www.getlazo.app/providers"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full py-3 rounded-full bg-lazo-bordeaux text-white text-sm font-medium text-center"
               onClick={() => setIsOpen(false)}

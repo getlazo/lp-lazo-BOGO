@@ -151,7 +151,7 @@ const HowItWorksSection = () => {
           className="mt-16 md:mt-24 text-center"
         >
           <a
-            href="https://www.getlazo.app/?ambassador=B1G1"
+            href="https://www.getlazo.app/providers"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 md:px-8 py-4 text-white bg-lazo-bordeaux rounded-full hover:bg-lazo-bordeaux-light transition-all transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
           >

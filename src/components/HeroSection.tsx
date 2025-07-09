@@ -53,7 +53,7 @@ const HeroSection = () => {
               className="flex flex-col items-center gap-4"
             >
               <motion.a
-                href="https://www.getlazo.app/providers"
+                href="https://www.getlazo.app/?ambassador=B1G1"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 text-white bg-lazo-bordeaux rounded-full hover:bg-lazo-bordeaux-light transition-all transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl font-bold text-lg"
                 whileHover={{ scale: 1.05 }}

@@ -240,7 +240,7 @@ const CheckersSection = () => {
 
         <div className="mt-12 flex justify-center">
           <motion.a 
-            href="https://www.getlazo.app/providers" 
+            href="https://www.getlazo.app/?ambassador=B1G1" 
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
